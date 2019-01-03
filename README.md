@@ -1,1 +1,0 @@
-# delizoderek.github.io
