@@ -38,12 +38,56 @@ nav{
     margin: 0px 10px;
 }
 
+
+main{
+    display:flex;
+    flex-direction: column;
+}
+
+/* Styling for the subtitle text on top of images */
+/* TODO: Move styling for padding to ID since it is specific to the heading*/
 .subtitle{
     display: flex;
+    margin: 10px 0px;
     padding: 0px 10px 0px 40px;
     background: cyan;
 }
 
+/* Handles flex styling for each portfolio section */
+.portfolio-sections{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* Handles flex styling for each portfolio title element */
+.portfolio-titles{
+    display:flex;
+    border-right: 10px solid slategray;
+    text-align: right;
+    flex-basis: 20%;
+}
+
+.portfolio-subsection{
+    display: flex;
+    flex-basis: 80%;
+    flex-wrap: wrap;
+}
+
+.portfolio-subsection figure{
+    display: flex;
+    flex-grow: 1;
+}
+
+.portfolio-subsection figure:first-child{
+    display: flex;
+    flex-grow: 5;
+}
+
+.portfolio-subsection img {
+    object-fit: cover;
+    width:100%;
+}
 /* Styles the site in a column layout when the screen width is less than 768px */
 @media  screen and (max-width: 768px) {
     header{
