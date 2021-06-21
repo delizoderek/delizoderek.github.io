@@ -1,8 +1,74 @@
+:root{
+    --border-width: 2px;
+}
+
 *{
     margin: 0px;
     padding: 0px;
 }
 
 body{
-    background: linear-gradient(blue 0%, purple 50%, maroon 100%);
+    background: whitesmoke;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: skyblue;
+}
+
+li{
+    display: inline-block;
+    flex-grow: 1;
+    text-align: center;
+    border-left: var(--border-width) solid white; 
+    padding: 0px 10px;
+}
+
+li:last-child{
+    border-right: var(--border-width) solid white;
+}
+
+nav{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 0px 10px;
+}
+
+.subtitle{
+    display: flex;
+    padding: 0px 10px 0px 40px;
+    background: cyan;
+}
+
+/* Styles the site in a column layout when the screen width is less than 768px */
+@media  screen and (max-width: 768px) {
+    header{
+        flex-direction: column;
+        justify-content: center;
+        align-items: stretch;
+    }
+
+    nav{
+        flex-direction: column;
+        margin: 0px;
+    }
+
+    li{
+        display:block;
+        border: 0px;
+        border-bottom: var(--border-width) solid gray ;
+        padding: 0px;
+    }
+
+    li:last-child{
+        border-right: 0px;
+    }
+
+    .subtitle{
+        align-self: center;
+    }
 }
