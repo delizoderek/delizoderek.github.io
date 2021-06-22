@@ -20,7 +20,7 @@ header{
 }
 
 h1{
-    font-size: 64px;
+    font-size: 48px;
     color: gray;
 }
 
@@ -69,8 +69,8 @@ main{
 /* Handles flex styling for each portfolio title element */
 .portfolio-titles{
     display:flex;
+    justify-content: right;
     border-right: 10px solid slategray;
-    text-align: right;
     flex-basis: 20%;
 }
 
@@ -78,18 +78,20 @@ main{
     display: flex;
     flex-basis: 80%;
     flex-wrap: wrap;
+    margin: 30px;
+    justify-content: space-around;
 }
 
 .portfolio-subsection figure{
     display: flex;
     flex: 1 1 40%;
     height: 250px;
-    margin: 30px;
+    margin: 15px;
     justify-content: center;
 }
 
 .portfolio-subsection figure:first-child{
-    flex: 5 5 50%;
+    flex: 5 5 60%;
     height: 550px;
 }
 
@@ -99,7 +101,30 @@ main{
     border: var(--border-width) solid skyblue;
 }
 
+#header-name{
+    display:flex;
+    flex-basis: 40px;
+    text-align: right;
+    margin-right: 5px;
+}
 
+#banner-subtitle{
+    display: flex;
+    position: absolute;
+    background: teal;
+    padding:5px;
+    right:10px;
+    bottom:10px;
+    font-family: monospace;
+    font-size: 24px;
+}
+
+/* Used as a root for the subtitle text */
+#banner-container{
+    display: flex;
+    position: relative;
+    overflow: clip;
+}
 
 /* Styles the site in a column layout when the screen width is less than 768px */
 @media  screen and (max-width: 768px) {
@@ -125,7 +150,7 @@ main{
         border-right: 0px;
     }
 
-    .subtitle{
+    .heading-name{
         align-self: center;
     }
 
@@ -133,5 +158,9 @@ main{
         display: flex;
         flex-grow: 1;
         height: 250px;
+    }
+
+    #banner-container{
+        display:none;
     }
 }
