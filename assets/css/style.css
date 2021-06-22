@@ -19,6 +19,11 @@ header{
     background: skyblue;
 }
 
+h1{
+    font-size: 64px;
+    color: gray;
+}
+
 li{
     display: inline-block;
     flex-grow: 1;
@@ -46,7 +51,7 @@ main{
 
 /* Styling for the subtitle text on top of images */
 /* TODO: Move styling for padding to ID since it is specific to the heading*/
-.subtitle{
+.heading-name{
     display: flex;
     margin: 10px 0px;
     padding: 0px 10px 0px 40px;
@@ -58,6 +63,7 @@ main{
     display:flex;
     flex-direction: row;
     justify-content: space-between;
+    margin: 20px; 
 }
 
 /* Handles flex styling for each portfolio title element */
@@ -76,18 +82,25 @@ main{
 
 .portfolio-subsection figure{
     display: flex;
-    flex-grow: 1;
+    flex: 1 1 40%;
+    height: 250px;
+    margin: 30px;
+    justify-content: center;
 }
 
 .portfolio-subsection figure:first-child{
-    display: flex;
-    flex-grow: 5;
+    flex: 5 5 50%;
+    height: 550px;
 }
 
 .portfolio-subsection img {
     object-fit: cover;
     width:100%;
+    border: var(--border-width) solid skyblue;
 }
+
+
+
 /* Styles the site in a column layout when the screen width is less than 768px */
 @media  screen and (max-width: 768px) {
     header{
@@ -114,5 +127,11 @@ main{
 
     .subtitle{
         align-self: center;
+    }
+
+    .portfolio-subsection figure:first-child{
+        display: flex;
+        flex-grow: 1;
+        height: 250px;
     }
 }
