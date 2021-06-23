@@ -8,7 +8,7 @@
 }
 
 body{
-    background: whitesmoke;
+    background: #fffbee;
 }
 
 header{
@@ -21,7 +21,7 @@ header{
 
 h1{
     font-size: 48px;
-    color: gray;
+    color: #485063;
 }
 
 li{
@@ -88,6 +88,7 @@ main{
     height: 250px;
     margin: 15px;
     justify-content: center;
+    background: white;
 }
 
 .portfolio-subsection figure:first-child{
@@ -95,27 +96,39 @@ main{
     height: 550px;
 }
 
-.portfolio-subsection img {
-    object-fit: cover;
-    width:100%;
-    border: var(--border-width) solid skyblue;
+.project-container{
+    border: 7px solid teal;
+    border-radius: 10px;
 }
+
+.image-transition{
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.project-container:hover .image-transition{
+    opacity: 0.7;
+}
+
 
 /* Used as a root for the subtitle text */
 .subtitle-container{
     display: flex;
+    flex-direction: column;
     position: relative;
     overflow: clip;
 }
 
 .subtitle-backdrop{
     display: flex;
+    flex-direction: column;
     position: absolute;
     background: teal;
     padding: 5px;
+    bottom: 0;
 }
 
-#header-name{
+.header-title{
     display:flex;
     flex-basis: 40px;
     text-align: right;
