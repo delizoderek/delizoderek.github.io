@@ -101,6 +101,20 @@ main{
     border: var(--border-width) solid skyblue;
 }
 
+/* Used as a root for the subtitle text */
+.subtitle-container{
+    display: flex;
+    position: relative;
+    overflow: clip;
+}
+
+.subtitle-backdrop{
+    display: flex;
+    position: absolute;
+    background: teal;
+    padding: 5px;
+}
+
 #header-name{
     display:flex;
     flex-basis: 40px;
@@ -109,22 +123,12 @@ main{
 }
 
 #banner-subtitle{
-    display: flex;
-    position: absolute;
-    background: teal;
-    padding:5px;
     right:10px;
     bottom:10px;
     font-family: monospace;
     font-size: 24px;
 }
 
-/* Used as a root for the subtitle text */
-#banner-container{
-    display: flex;
-    position: relative;
-    overflow: clip;
-}
 
 /* Styles the site in a column layout when the screen width is less than 768px */
 @media  screen and (max-width: 768px) {
