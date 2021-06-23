@@ -18,12 +18,25 @@ header{
     flex-direction: var(--layout-direction);
     justify-content: space-between;
     align-items: center;
-    background: skyblue;
+    background: #faebd7;
 }
 
 h1{
     font-size: 48px;
     color: #485063;
+}
+
+h2,h3{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+h2{
+    font-size: 22px;
+}
+
+h3{
+    font-size: 18px;
+    color: rgb(44, 44, 44);
 }
 
 li{
@@ -57,12 +70,11 @@ main{
 }
 
 /* Styling for the subtitle text on top of images */
-/* TODO: Move styling for padding to ID since it is specific to the heading*/
 .heading-name{
     display: flex;
     margin: 10px 0px;
     padding: 0px 10px 0px 40px;
-    background: cyan;
+    background: lightblue;
 }
 
 /* Handles flex styling for each portfolio section */
@@ -105,13 +117,14 @@ main{
 }
 
 .project-container{
-    border: 7px solid teal;
+    border: 7px solid lightblue;
     border-radius: 10px;
 }
 
 .image-transition{
     transition: .5s ease;
     backface-visibility: hidden;
+    /* object-fit: cover; */
 }
 
 .project-container:hover .image-transition{
@@ -132,7 +145,7 @@ main{
     display: flex;
     flex-direction: column;
     position: absolute;
-    background: teal;
+    background: lightblue;
     padding: 5px;
     bottom: 0;
 }
@@ -144,8 +157,11 @@ main{
     margin-right: 5px;
 }
 
+
+
 #navlinks{
-    font-size: large;
+    font-size: 20px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 }
 
 #banner-subtitle{
@@ -172,10 +188,6 @@ main{
     align-self: center;
     border-bottom: 3px solid black;
     margin: 5px;
-}
-
-@media screen and (max-wdith) {
-    
 }
 
 /* Styles the site in a column layout when the screen width is less than 768px */
@@ -206,6 +218,9 @@ main{
         border-right: 0px;
         border-bottom: var(--navbar-border) ;
     }
+    body figure:first-child{
+        display:none;
+    }
 
     .heading-name{
         align-self: center;
@@ -226,8 +241,6 @@ main{
 
     }
 
-
-
     .portfolio-sections{
         margin: 0px;
         margin-top: 10px;
@@ -238,17 +251,22 @@ main{
         margin: 15px 15px;
     }
 
-    .projectlinks{
-        margin:15px 0px;
-    }
-
     .portfolio-subsection .projectlinks:first-child{
         display: flex;
         flex-grow: 1;
-        height: 250px;
+        height: auto;
+    }
+
+    .projectlinks{
+        margin:15px 0px;
+        height:200px;
     }
 
     #banner-container{
         display:none;
+    }
+
+    #hidebanner{
+        display: none;
     }
 }
