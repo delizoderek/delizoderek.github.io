@@ -1,5 +1,7 @@
 :root{
     --border-width: 2px;
+    --layout-direction: row;
+    --navbar-border: var(--border-width) solid gray;
 }
 
 *{
@@ -13,7 +15,7 @@ body{
 
 header{
     display: flex;
-    flex-direction: row;
+    flex-direction: var(--layout-direction);
     justify-content: space-between;
     align-items: center;
     background: skyblue;
@@ -28,21 +30,26 @@ li{
     display: inline-block;
     flex-grow: 1;
     text-align: center;
-    border-left: var(--border-width) solid white; 
+    border-right: var(--navbar-border); 
     padding: 0px 10px;
 }
 
 li:last-child{
-    border-right: var(--border-width) solid white;
+    border-right: 0px;
 }
 
 nav{
     display:flex;
-    flex-direction: row;
+    flex-direction: var(--layout-direction);
     justify-content: space-evenly;
     margin: 0px 10px;
 }
 
+/* Reset link styling */
+a{
+    color:black;
+    text-decoration: none;
+}
 
 main{
     display:flex;
@@ -61,7 +68,7 @@ main{
 /* Handles flex styling for each portfolio section */
 .portfolio-sections{
     display:flex;
-    flex-direction: row;
+    flex-direction: var(--layout-direction);
     justify-content: space-between;
     margin: 20px; 
 }
@@ -76,24 +83,25 @@ main{
 
 .portfolio-subsection{
     display: flex;
+    flex-direction: var(--layout-direction);
     flex-basis: 80%;
     flex-wrap: wrap;
     margin: 30px;
     justify-content: space-around;
 }
 
-.portfolio-subsection figure{
+.portfolio-subsection .projectlinks:first-child{
+    flex: 5 5 60%;
+    height: 550px;
+}
+
+.projectlinks{
     display: flex;
     flex: 1 1 40%;
     height: 250px;
     margin: 15px;
     justify-content: center;
     background: white;
-}
-
-.portfolio-subsection figure:first-child{
-    flex: 5 5 60%;
-    height: 550px;
 }
 
 .project-container{
@@ -117,6 +125,7 @@ main{
     flex-direction: column;
     position: relative;
     overflow: clip;
+    
 }
 
 .subtitle-backdrop{
@@ -135,6 +144,10 @@ main{
     margin-right: 5px;
 }
 
+#navlinks{
+    font-size: large;
+}
+
 #banner-subtitle{
     right:10px;
     bottom:10px;
@@ -142,36 +155,94 @@ main{
     font-size: 24px;
 }
 
+#aboutme-subsection{
+    justify-content: flex-start;
+}
+
+#aboutme-paragraph{
+    text-align: left;
+    font-size: 18px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #5d6475;
+    
+}
+
+#contactlinks{
+    display:flex;
+    align-self: center;
+    border-bottom: 3px solid black;
+    margin: 5px;
+}
+
+@media screen and (max-wdith) {
+    
+}
 
 /* Styles the site in a column layout when the screen width is less than 768px */
 @media  screen and (max-width: 768px) {
+    :root{
+        --layout-direction: column;
+    }
+
     header{
-        flex-direction: column;
+        /* flex-direction: var(--layout-direction); */
         justify-content: center;
         align-items: stretch;
     }
 
     nav{
-        flex-direction: column;
+        /* flex-direction: var(--layout-direction);; */
         margin: 0px;
     }
 
     li{
         display:block;
         border: 0px;
-        border-bottom: var(--border-width) solid gray ;
-        padding: 0px;
+        border-top: var(--navbar-border);
+        padding: 5px 0px;
     }
 
     li:last-child{
         border-right: 0px;
+        border-bottom: var(--navbar-border) ;
     }
 
     .heading-name{
         align-self: center;
+        background: transparent;
+        margin: 10px 0x;
     }
 
-    .portfolio-subsection figure:first-child{
+    .portfolio-titles{
+        justify-content: center;
+        border-right: 0;
+        border-bottom: 10px solid slategray;
+    }
+
+    .header-title{
+        justify-content: center;
+        flex-basis: auto;
+        text-align: center;
+
+    }
+
+
+
+    .portfolio-sections{
+        margin: 0px;
+        margin-top: 10px;
+    }
+
+    .portfolio-subsection{
+        flex-wrap:nowrap;
+        margin: 15px 15px;
+    }
+
+    .projectlinks{
+        margin:15px 0px;
+    }
+
+    .portfolio-subsection .projectlinks:first-child{
         display: flex;
         flex-grow: 1;
         height: 250px;

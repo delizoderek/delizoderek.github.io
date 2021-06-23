@@ -13,17 +13,17 @@
       <h1 class="heading-name">Derek DeLizo</h1>
       <nav>
         <ul>
-          <li><a href="#about-me">About Me</a></li>
-          <li><a href="#work">Work</a></li>
-          <li><a href="#contact-me">Contact Me</a></li>
-          <li><a href="#">Resume</a></li>
+          <li><a id="navlinks" href="#about-me">About Me</a></li>
+          <li><a id="navlinks" href="#work">Work</a></li>
+          <li><a id="navlinks" href="#contact-me">Contact Me</a></li>
+          <li><a id="navlinks" href="#">Resume</a></li>
         </ul>
       </nav>
     </header>
     <!-- Banner with subtitle -->
     <figure class="subtitle-container">
       <!-- Need to add a subtitle over the image using position:absolute -->
-      <img src="https://placekitten.com/1440/200" alt="Cat Banner" />
+      <img src="https://placekitten.com/1440/200" alt="Photo of a cat" />
       <h2 id="banner-subtitle" class="subtitle-backdrop">
         MOV r1,#C | MOV r2,#S | MOV r3,#S
       </h2>
@@ -34,12 +34,13 @@
         <aside class="portfolio-titles">
           <h1 class="header-title">About Me</h1>
         </aside>
-        <article class="portfolio-subsection">
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni est,
-            corrupti pariatur aliquam laboriosam, amet consectetur recusandae
-            quisquam quod possimus velit vel, ipsa eligendi adipisci repellendus
-            incidunt accusamus nam nemo.
+        <article id="aboutme-subsection" class="portfolio-subsection">
+          <p id="aboutme-paragraph">
+            Hello my name is Derek DeLizo,
+            <br>
+            <br>
+            I am an electrical engineer that has transitioned to being a software developer.
+             Currently, I am doing a full stack development bootcamp through UW and am working towards my certification.
           </p>
         </article>
       </section>
@@ -50,41 +51,41 @@
           <h1 class="header-title">Work</h1>
         </aside>
         <section class="portfolio-subsection">
-          <figure class="subtitle-container project-container">
+          <a class="projectlinks subtitle-container project-container" href="https://github.com/delizoderek/SMART-Glove-Unity">
             <img class="image-transition" src="https://placekitten.com/900/600" alt="" />
             <div class="subtitle-backdrop">
               <h2>Project Title</h2>
               <h3>Tech Used</h3>
             </div>
-          </figure>
-          <figure class="subtitle-container project-container">
+          </a>
+          <a class="projectlinks subtitle-container project-container" href="#">
             <img class="image-transition" src="https://placekitten.com/400/300" alt="" />
             <div class="subtitle-backdrop">
               <h2>Project Title</h2>
               <h3>Tech Used</h3>
             </div>
-          </figure>
-          <figure class="subtitle-container project-container">
+          </a>
+          <a class="projectlinks subtitle-container project-container" href="#">
             <img class="image-transition" src="https://placekitten.com/400/300" alt="" />
             <div class="subtitle-backdrop">
               <h2>Project Title</h2>
               <h3>Tech Used</h3>
             </div>
-          </figure>
-          <figure class="subtitle-container project-container">
+          </a>
+          <a class="projectlinks subtitle-container project-container" href="#">
             <img class="image-transition" src="https://placekitten.com/400/300" alt="" />
             <div class="subtitle-backdrop">
               <h2>Project Title</h2>
               <h3>Tech Used</h3>
             </div>
-          </figure>
-          <figure class="subtitle-container project-container">
+          </a>
+          <a class="projectlinks subtitle-container project-container" href="#">
             <img class="image-transition" src="https://placekitten.com/400/300" alt="" />
             <div class="subtitle-backdrop">
               <h2>Project Title</h2>
               <h3>Tech Used</h3>
             </div>
-          </figure>
+          </a>
         </section>
       </section>
       <!-- Contact us -->
@@ -93,10 +94,10 @@
           <h1 class="header-title">Contact Me</h1>
         </aside>
         <section class="portfolio-subsection">
-          <h2>425-275-3457</h2>
-          <h2>dwdelizo@gmail.com</h2>
-          <h2>LinkedIn</h2>
-          <h2>Github</h2>
+          <h2 id="contactlinks">425-275-3457</h2>
+          <h2 id="contactlinks"><a href="mailto:dwdelizo@gmail.com">dwdelizo@gmail.com</a></h2>
+          <h2 id="contactlinks"><a href="https://www.linkedin.com/in/derek-delizo/">LinkedIn</a></h2>
+          <h2 id="contactlinks"><a href="https://github.com/delizoderek">Github</a></h2>
         </section>
       </section>
     </main>
