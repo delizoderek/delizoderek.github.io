@@ -1,18 +1,22 @@
+/* Variables used for repetitive styling */
 :root{
     --border-width: 2px;
     --layout-direction: row;
     --navbar-border: var(--border-width) solid gray;
 }
 
+/* Sets the initial margin and padding to 0px */
 *{
     margin: 0px;
     padding: 0px;
 }
 
+/* background color for website */
 body{
     background: #fffbee;
 }
 
+/* Handles header styling */
 header{
     display: flex;
     flex-direction: var(--layout-direction);
@@ -21,24 +25,29 @@ header{
     background: #faebd7;
 }
 
+/* Sets styling for the h1 headers */
 h1{
     font-size: 48px;
     color: #485063;
 }
 
+/* Common font-family for h2 & h3 headers */
 h2,h3{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+/* Sets font-size for h2 */
 h2{
     font-size: 22px;
 }
 
+/* Sets font-size for h3 */
 h3{
     font-size: 18px;
     color: rgb(44, 44, 44);
 }
 
+/* Makes the list items inline and adds box seperators between each element */
 li{
     display: inline-block;
     flex-grow: 1;
@@ -47,10 +56,12 @@ li{
     padding: 0px 10px;
 }
 
+/* Removes the border for the last list item */
 li:last-child{
     border-right: 0px;
 }
 
+/* Styling for the nav container */
 nav{
     display:flex;
     flex-direction: var(--layout-direction);
@@ -64,6 +75,7 @@ a{
     text-decoration: none;
 }
 
+/* Flex styling for main */
 main{
     display:flex;
     flex-direction: column;
@@ -93,6 +105,7 @@ main{
     flex-basis: 20%;
 }
 
+/* Styling for each subsection of the portfolio */
 .portfolio-subsection{
     display: flex;
     flex-direction: var(--layout-direction);
@@ -102,11 +115,13 @@ main{
     justify-content: space-around;
 }
 
+/* Makes the first project bigger than the rest */
 .portfolio-subsection .projectlinks:first-child{
     flex: 5 5 60%;
     height: 550px;
 }
 
+/* Styling for the project link blocks */
 .projectlinks{
     display: flex;
     flex: 1 1 40%;
@@ -116,17 +131,19 @@ main{
     background: white;
 }
 
+/* General container for the projects section */
 .project-container{
     border: 7px solid lightblue;
     border-radius: 10px;
 }
 
+/* Adds a transition effect when opacity is changed */
 .image-transition{
     transition: .5s ease;
     backface-visibility: hidden;
-    /* object-fit: cover; */
 }
 
+/* Changes the opacity of the project image */
 .project-container:hover .image-transition{
     opacity: 0.7;
 }
@@ -141,6 +158,7 @@ main{
     
 }
 
+/* Styling for the container behind the subtitle text */
 .subtitle-backdrop{
     display: flex;
     flex-direction: column;
@@ -150,6 +168,7 @@ main{
     bottom: 0;
 }
 
+/*  */
 .header-title{
     display:flex;
     flex-basis: 40px;
@@ -157,13 +176,13 @@ main{
     margin-right: 5px;
 }
 
-
-
+/* Font formatting for the links in the nav bar */
 #navlinks{
     font-size: 20px;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 }
 
+/* Formatting for the subtitle in the banner */
 #banner-subtitle{
     right:10px;
     bottom:10px;
@@ -171,10 +190,12 @@ main{
     font-size: 24px;
 }
 
+/* Used to align the about me paragraph */
 #aboutme-subsection{
     justify-content: flex-start;
 }
 
+/* Formats the text contained in the about me paragraph */
 #aboutme-paragraph{
     text-align: left;
     font-size: 18px;
@@ -183,6 +204,7 @@ main{
     
 }
 
+/* Formatting for the contact me links */
 #contactlinks{
     display:flex;
     align-self: center;
@@ -266,6 +288,7 @@ main{
         display:none;
     }
 
+    /* Used to hide the image banner when in movile view */
     #hidebanner{
         display: none;
     }
