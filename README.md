@@ -13,11 +13,11 @@ The goal of this assignment was to setup a portfolio page that shows off the pro
 
 ## [Portfolio Page](delizoderek.github.io)
 
-![Webpage1](./assets/images/Webpage1.png)
-![Webpage2](./assets/images/Webpage2.png)
-![Webpage3](./assets/images/Webpage3.png)
+![Webpage1](./assets/media/ReadmeContent/Webpage1.png)
+![Webpage2](./assets/media/ReadmeContent/Webpage2.png)
+![Webpage3](./assets/media/ReadmeContent/Webpage3.png)
 
 ## My Wireframe
 Here is the wireframe I used to initially mockup the website.
 
-![Wireframe for site](./assets/images/Portfolio_Wireframe.svg)
+![Wireframe for site](./assets/media/ReadmeContent/Portfolio_Wireframe.svg)

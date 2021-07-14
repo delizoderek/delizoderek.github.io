@@ -2,13 +2,17 @@
 :root{
     --border-width: 2px;
     --layout-direction: row;
+    --direction-alignment: flex-start;
     --navbar-border: var(--border-width) solid gray;
+    --card-margin: 30px;
+    --head-alignment: flex-end;
 }
 
 /* Sets the initial margin and padding to 0px */
 *{
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
 }
 
 /* background color for website */
@@ -27,7 +31,7 @@ header{
 
 /* Sets styling for the h1 headers */
 h1{
-    font-size: 48px;
+    font-size: 42px;
     color: #485063;
 }
 
@@ -45,6 +49,14 @@ h2{
 h3{
     font-size: 18px;
     color: rgb(44, 44, 44);
+}
+
+aside{
+    border-right: var(--nav);
+}
+
+ul{
+    margin-bottom: 0px;
 }
 
 /* Makes the list items inline and adds box seperators between each element */
@@ -75,10 +87,25 @@ a{
     text-decoration: none;
 }
 
-/* Flex styling for main */
-main{
-    display:flex;
-    flex-direction: column;
+.custom-direction{
+    flex-direction: var(--layout-direction);
+    align-items: var(--direction-alignment);
+}
+
+.custom-card-margin{
+    margin: var(--card-margin);
+}
+
+.custom-alignment{
+    justify-content: var(--head-alignment);
+}
+
+.custom-container-bg{
+    background-color: #E8E4CC;
+}
+
+.custom-btn{
+    background: lightblue;
 }
 
 /* Styling for the subtitle text on top of images */
@@ -86,6 +113,7 @@ main{
     display: flex;
     margin: 10px 0px;
     padding: 0px 10px 0px 40px;
+    border-radius: 0 5px 5px 0;
     background: lightblue;
 }
 
@@ -103,16 +131,6 @@ main{
     justify-content: right;
     border-right: 10px solid slategray;
     flex-basis: 20%;
-}
-
-/* Styling for each subsection of the portfolio */
-.portfolio-subsection{
-    display: flex;
-    flex-direction: var(--layout-direction);
-    flex-basis: 80%;
-    flex-wrap: wrap;
-    margin: 30px;
-    justify-content: space-around;
 }
 
 /* Makes the first project bigger than the rest */
@@ -176,6 +194,12 @@ main{
     margin-right: 5px;
 }
 
+#avatar{
+    max-width: 300px;
+    max-height: 300px;
+    margin-right: 20px;
+}
+
 /* Font formatting for the links in the nav bar */
 #navlinks{
     font-size: 20px;
@@ -216,6 +240,9 @@ main{
 @media  screen and (max-width: 768px) {
     :root{
         --layout-direction: column;
+        --direction-alignment: center;
+        --card-margin: 10px 0;
+        --head-alignment: center;
     }
 
     header{
@@ -227,6 +254,11 @@ main{
     nav{
         /* flex-direction: var(--layout-direction);; */
         margin: 0px;
+    }
+
+    ul{
+        margin-bottom: 0px;
+        padding-left: 0px;
     }
 
     li{
@@ -286,6 +318,12 @@ main{
 
     #banner-container{
         display:none;
+    }
+
+    #avatar{
+        justify-content: center;
+        margin-right: 0;;
+        margin-bottom: 20px;
     }
 
     /* Used to hide the image banner when in movile view */
