@@ -1,333 +1,177 @@
-/* Variables used for repetitive styling */
-:root{
-    --border-width: 2px;
-    --layout-direction: row;
-    --direction-alignment: flex-start;
-    --navbar-border: var(--border-width) solid gray;
-    --card-margin: 30px;
-    --head-alignment: flex-end;
+:root {
+  --prime-color: #343d46;
+  --second-color: #4f5b66;
+  --tert-color: #65737e;
+  --quat-color: #a7adba;
+  --quin-color: #c0c5ce;
+  --layout-direction: row;
+  --justify-alignment: center;
+  --alignment-direction: center;
+  --burger-visibility: none;
+  --nav-visibility: flex;
+  --card-margin: 30px;
 }
 
-/* Sets the initial margin and padding to 0px */
-*{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
 
-/* background color for website */
-body{
-    background: #fffbee;
+body {
+  background-color: var(--tert-color);
 }
 
-/* Handles header styling */
-header{
-    display: flex;
-    flex-direction: var(--layout-direction);
-    justify-content: space-between;
-    align-items: center;
-    background: #faebd7;
+a {
+  text-decoration: none;
 }
 
-/* Sets styling for the h1 headers */
-h1{
-    font-size: 42px;
-    color: #485063;
+h1 {
+  margin: 5px 0px 5px 0px;
 }
 
-/* Common font-family for h2 & h3 headers */
-h2,h3{
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+.hamburger {
+  display: var(--burger-visibility);
+  height: 35px;
+  width: 35px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--quat-color);
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  background-color: transparent;
+  border: 1px solid var(--quat-color);
+  padding: 0.2rem 0.2rem;
+  margin: 0 0.7rem;
+  font-size: 1rem;
+  border-radius: 0.25rem;
 }
 
-/* Sets font-size for h2 */
-h2{
-    font-size: 22px;
+.prime-bg {
+  background: var(--prime-color);
+}
+.second-bg {
+  background: var(--second-color);
+}
+.tert-bg {
+  background: var(--tert-color);
+}
+.quat-bg {
+  background: var(--quat-color);
+}
+.quin-bg {
+  background: var(--quin-color);
+}
+.prime-text {
+  color: var(--prime-color);
+}
+.prime-text:hover {
+  color: var(--tert-color);
+}
+.second-text {
+  color: var(--second-color);
+}
+.second-text:hover {
+  color: var(--tert-color);
+}
+.tert-text {
+  color: var(--tert-color);
+}
+.tert-text:hover {
+  color: var(--tert-color);
+}
+.quat-text {
+  color: var(--quat-color);
+}
+.quat-text:hover {
+  color: var(--tert-color);
+}
+.quin-text {
+  color: var(--quin-color);
+}
+li > .quin-text:hover {
+  color: var(--tert-color);
 }
 
-/* Sets font-size for h3 */
-h3{
-    font-size: 18px;
-    color: rgb(44, 44, 44);
+.custom-nav {
+  display: flex;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
 }
 
-aside{
-    border-right: var(--nav);
+.custom-btn {
+  background: var(--quat-color);
 }
 
-ul{
-    margin-bottom: 0px;
+.custom-direction {
+  flex-direction: var(--layout-direction);
 }
 
-/* Makes the list items inline and adds box seperators between each element */
-li{
-    display: inline-block;
-    flex-grow: 1;
-    text-align: center;
-    border-right: var(--navbar-border); 
-    padding: 0px 10px;
+.custom-justify {
+  justify-content: var(--justify-alignment);
+}
+.custom-align {
+  align-items: var(--alignment-direction);
 }
 
-/* Removes the border for the last list item */
-li:last-child{
-    border-right: 0px;
+.custom-card-margin {
+  margin: var(--card-margin);
 }
 
-/* Styling for the nav container */
-nav{
-    display:flex;
-    flex-direction: var(--layout-direction);
-    justify-content: space-evenly;
-    margin: 0px 10px;
+.custom-contain {
+  display: flex;
+  flex-wrap: inherit;
+  align-items: center;
+  width: 100%;
 }
 
-/* Reset link styling */
-a{
-    color:black;
-    text-decoration: none;
-}
-
-.custom-direction{
-    flex-direction: var(--layout-direction);
-    align-items: var(--direction-alignment);
-}
-
-.custom-card-margin{
-    margin: var(--card-margin);
-}
-
-.custom-alignment{
-    justify-content: var(--head-alignment);
-}
-
-.custom-container-bg{
-    background-color: #E8E4CC;
-}
-
-.custom-btn{
-    background: lightblue;
-}
-
-/* Styling for the subtitle text on top of images */
-.heading-name{
-    display: flex;
-    margin: 10px 0px;
-    padding: 0px 10px 0px 40px;
-    border-radius: 0 5px 5px 0;
-    background: lightblue;
-}
-
-/* Handles flex styling for each portfolio section */
-.portfolio-sections{
-    display:flex;
-    flex-direction: var(--layout-direction);
-    justify-content: space-between;
-    margin: 20px; 
-}
-
-/* Handles flex styling for each portfolio title element */
-.portfolio-titles{
-    display:flex;
-    justify-content: right;
-    border-right: 10px solid slategray;
-    flex-basis: 20%;
-}
-
-/* Makes the first project bigger than the rest */
-.portfolio-subsection .projectlinks:first-child{
-    flex: 5 5 60%;
-    height: 550px;
-}
-
-/* Styling for the project link blocks */
-.projectlinks{
-    display: flex;
-    flex: 1 1 40%;
-    height: 250px;
-    margin: 15px;
-    justify-content: center;
-    background: white;
-}
-
-/* General container for the projects section */
-.project-container{
-    border: 7px solid lightblue;
-    border-radius: 10px;
-}
-
-/* Adds a transition effect when opacity is changed */
-.image-transition{
-    transition: .5s ease;
-    backface-visibility: hidden;
-}
-
-/* Changes the opacity of the project image */
-.project-container:hover .image-transition{
-    opacity: 0.7;
-}
-
-
-/* Used as a root for the subtitle text */
-.subtitle-container{
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    overflow: clip;
-    
-}
-
-/* Styling for the container behind the subtitle text */
-.subtitle-backdrop{
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    background: lightblue;
-    padding: 5px;
-    bottom: 0;
-}
-
-/*  */
-.header-title{
-    display:flex;
-    flex-basis: 40px;
-    text-align: right;
-    margin-right: 5px;
-}
-
-#avatar{
-    max-width: 300px;
-    max-height: 300px;
-    margin-right: 20px;
-}
-
-/* Font formatting for the links in the nav bar */
-#navlinks{
-    font-size: 20px;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
-}
-
-/* Formatting for the subtitle in the banner */
-#banner-subtitle{
-    right:10px;
-    bottom:10px;
-    font-family: monospace;
-    font-size: 24px;
-}
-
-/* Used to align the about me paragraph */
-#aboutme-subsection{
-    justify-content: flex-start;
-}
-
-/* Formats the text contained in the about me paragraph */
-#aboutme-paragraph{
-    text-align: left;
-    font-size: 18px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: #5d6475;
-    
+.show-menu {
+  display: var(--nav-visibility);
 }
 
 /* Formatting for the contact me links */
-#contactlinks{
-    display:flex;
-    align-self: center;
-    border-bottom: 3px solid black;
-    margin: 5px;
+.contactlinks {
+  display: flex;
+  align-self: center;
+  border-bottom: 3px solid var(--quin-color);
+  margin: 5px;
 }
 
-/* Styles the site in a column layout when the screen width is less than 768px */
-@media  screen and (max-width: 768px) {
-    :root{
-        --layout-direction: column;
-        --direction-alignment: center;
-        --card-margin: 10px 0;
-        --head-alignment: center;
-    }
+/*  */
+.section-title {
+  color: var(--quin-color);
+  width: 100vw;
+  text-align: center;
+  padding-top: 10px;
+}
 
-    header{
-        /* flex-direction: var(--layout-direction); */
-        justify-content: center;
-        align-items: stretch;
-    }
+#avatar {
+  border: 5px solid white;
+  box-shadow: 0px 0px 5px 1px black;
+  max-width: 300px;
+  max-height: 300px;
+  margin-right: 20px;
+}
 
-    nav{
-        /* flex-direction: var(--layout-direction);; */
-        margin: 0px;
-    }
+/* Formats the text contained in the about me paragraph */
+#aboutme-paragraph {
+  text-align: left;
+  padding: 20px;
+  font-size: 18px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  border-radius: 5px;
+  color: var(--quin-color);
+  background-color: var(--second-color);
+}
 
-    ul{
-        margin-bottom: 0px;
-        padding-left: 0px;
-    }
-
-    li{
-        display:block;
-        border: 0px;
-        border-top: var(--navbar-border);
-        padding: 5px 0px;
-    }
-
-    li:last-child{
-        border-right: 0px;
-        border-bottom: var(--navbar-border) ;
-    }
-    body figure:first-child{
-        display:none;
-    }
-
-    .heading-name{
-        align-self: center;
-        background: transparent;
-        margin: 10px 0x;
-    }
-
-    .portfolio-titles{
-        justify-content: center;
-        border-right: 0;
-        border-bottom: 10px solid slategray;
-    }
-
-    .header-title{
-        justify-content: center;
-        flex-basis: auto;
-        text-align: center;
-
-    }
-
-    .portfolio-sections{
-        margin: 0px;
-        margin-top: 10px;
-    }
-
-    .portfolio-subsection{
-        flex-wrap:nowrap;
-        margin: 15px 15px;
-    }
-
-    .portfolio-subsection .projectlinks:first-child{
-        display: flex;
-        flex-grow: 1;
-        height: auto;
-    }
-
-    .projectlinks{
-        margin:15px 0px;
-        height:200px;
-    }
-
-    #banner-container{
-        display:none;
-    }
-
-    #avatar{
-        justify-content: center;
-        margin-right: 0;;
-        margin-bottom: 20px;
-    }
-
-    /* Used to hide the image banner when in movile view */
-    #hidebanner{
-        display: none;
-    }
+@media screen and (max-width: 768px) {
+  :root {
+    --layout-direction: column;
+    --justify-alignment: center;
+    --alignment-direction: center;
+    --card-margin: 10px 0;
+    --burger-visibility: inline-block;
+    --nav-visibility: none;
+  }
 }

@@ -1,141 +1,261 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Derek DeLizo Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Derek DeLizo's Portfolio</title>
+    <link rel="stylesheet" href="./assets/css/reset.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
   <body>
-    <header>
-      <h1 class="heading-name">Derek DeLizo</h1>
-      <nav>
-        <ul>
-          <li><a id="navlinks" href="#about-me">About Me</a></li>
-          <li><a id="navlinks" href="#work">Work</a></li>
-          <li><a id="navlinks" href="#contact-me">Contact Me</a></li>
-          <li>
-            <a
-              id="navlinks"
-              href="./assets/media/SiteContent/DerekDeLizo_Embedded_Resume.pdf"
-              download
-              >Resume</a
-            >
-          </li>
-        </ul>
+    <header class="d-flex justify-content-between prime-bg custom-direction">
+      <div class="d-flex justify-content-between align-items-center">
+        <h1 class="mx-3 quin-text">Derek DeLizo</h1>
+        <button
+          id="navBtn"
+          class="hamburger"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="fa fa-bars"></i>
+        </button>
+      </div>
+      <nav id="navMenu" class="navbar navbar-expand-lg show-menu">
+        <div class="custom-contain custom-justify">
+          <ul class="custom-nav custom-align custom-direction">
+            <li class="nav-item">
+              <a class="nav-link quin-text" aria-current="page" href="#about-me"
+                >About Me</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link quin-text" href="#work">Work</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link quin-text" href="#contact-me">Contact Me</a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link quin-text"
+                href="./assets/media/SiteContent/DerekDeLizo_Embedded_Resume.pdf"
+                download
+                >Resume</a
+              >
+            </li>
+          </ul>
+        </div>
       </nav>
     </header>
-    <!-- Banner with subtitle -->
-    <figure id="hidebanner" class="subtitle-container">
-      <!-- Need to add a subtitle over the image using position:absolute -->
-      <img src="https://placekitten.com/1440/200" alt="Photo of a cat" />
-      <h2 id="banner-subtitle" class="subtitle-backdrop">
-        MOV r1,#C | MOV r2,#S | MOV r3,#S
-      </h2>
-    </figure>
-    <main class="d-flex flex-wrap">
-      <aside id="about-me" class="col-12 col-lg-2 d-flex custom-alignment">
-        <h1 class="header-title">About Me</h1>
-      </aside>
-      <section class="col-12 col-lg-10 d-flex justify-content-around">
-        <div class="d-flex container rounded custom-direction m-4 p-4 custom-container-bg">
+    <main class="d-flex flex-column">
+      <h2 id="about-me" class="section-title">About Me</h2>
+      <section class="col-12 d-flex custom-direction justify-content-around custom-align">
+        <div class="col-12 col-lg-9 d-flex custom-direction justify-content-between custom-align">
           <img
             src="./assets/media/SiteContent/DeLizoDerek_Square.jpg"
             id="avatar"
-            class="img-thumbnail rounded-circle float-start"
+            class="float-start m-3"
             alt="Headshot of a person in a collared shirt"
           />
-          <p id="aboutme-paragraph">
-            Hello my name is Derek DeLizo,
-            <br />
-            <br />
-            I am an electrical engineer that is transitioning to beocoming a
-            software developer. Currently, I am completing the full stack
-            development bootcamp through UW. Web development has always been a
-            passion of mine since I was young and now, the dream is becoming a
-            reality.
-          </p>
+          <div class="d-flex p-4">
+            <p id="aboutme-paragraph">
+              Hello my name is Derek DeLizo,
+              <br />
+              <br />
+              I am an electrical engineer that is transitioning to beocoming a
+              software developer. Currently, I am completing the full stack
+              development bootcamp through UW. Web development has always been a
+              passion of mine since I was young and now, the dream is becoming a
+              reality.
+            </p>
+          </div>
         </div>
       </section>
-      <aside id="work" class="col-12 col-lg-2 d-flex custom-alignment">
-        <h1 class="header-title">Work</h1>
-      </aside>
-      <section class="col-12 col-lg-10 p-3 d-flex flex-wrap justify-content-around custom-direction">
-        <div class="col-12 card custom-card-margin">
-            <img src="./assets/media/SiteContent/Games-for-You_Thumbnail.png" class="card-img-top" alt="...">
-            <div class="card-body custom-container-bg">
+      <h2 id="about-me" class="section-title">Work</h2>
+      <section class="col-12 d-flex align-items-center justify-content-center">
+        <div class="w-75 custom-card-margin border-0">
+          <div class="card second-bg">
+            <img
+              src="./assets/media/SiteContent/battle-brands_entirepage.gif"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body second-bg">
+              <h5 class="card-title">Battle Brands</h5>
+              <p class="card-text">
+                HTML | CSS | JavaScript | Express | NodeJs | SQL | Git
+              </p>
+              <a
+                href="https://battle-brands.herokuapp.com"
+                target="_blank"
+                class="btn custom-btn"
+                >Deployed Application</a
+              >
+              <a
+                href="https://github.com/Atlas238/battle-brands"
+                target="_blank"
+                class="btn custom-btn"
+                >Source Code</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        class="
+          col-12
+          d-flex
+          flex-wrap
+          align-items-center
+          justify-content-center
+          custom-direction
+        "
+      >
+        <div class="w-75 d-flex flex-wrap justify-content-between custom-card-margin">
+          <div class="col-12 col-lg-5 card my-3 second-bg">
+            <img
+              src="./assets/media/SiteContent/Games-for-You_Thumbnail.png"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body second-bg">
               <h5 class="card-title">Games for You</h5>
-              <p class="card-text">HTML | CSS | JavaScript | Git | RAWG API | Board Game Atlas API</p>
-              <a href="https://delizoderek.github.io/Games-for-you/" target="_blank" class="btn custom-btn">Deployed Application</a>
-              <a href="https://github.com/delizoderek/Games-for-you" target="_blank" class="btn custom-btn">Source Code</a>
+              <p class="card-text">
+                HTML | CSS | JavaScript | Git | RAWG API | Board Game Atlas API
+              </p>
+              <a
+                href="https://delizoderek.github.io/Games-for-you/"
+                target="_blank"
+                class="btn custom-btn"
+                >Deployed Application</a
+              >
+              <a
+                href="https://github.com/delizoderek/Games-for-you"
+                target="_blank"
+                class="btn custom-btn"
+                >Source Code</a
+              >
             </div>
           </div>
-          <div class="col-12 col-lg-5 card custom-card-margin">
-            <img src="./assets/media/SiteContent/DayPlanner2.png" class="card-img-top" alt="...">
-            <div class="card-body custom-container-bg">
-              <h5 class="card-title">Day Planner</h5>
-              <p class="card-text">HTML | CSS | JavaScript | Moment.js | Git</p>
-              <a href="https://delizoderek.github.io/uwbootcamp_daily-planner/" target="_blank" class="btn custom-btn">Deployed Application</a>
-              <a href="https://github.com/delizoderek/uwbootcamp_daily-planner" target="_blank" class="btn custom-btn">Source Code</a>
-            </div>
-          </div>
-          <div class="col-12 col-lg-5 card custom-card-margin">
-            <img src="./assets/media/SiteContent/CodeQuiz2.png" class="card-img-top" alt="...">
-            <div class="card-body custom-container-bg">
+          <div class="col-12 col-lg-5 card my-3 second-bg">
+            <img
+              src="./assets/media/SiteContent/CodeQuiz2.png"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body second-bg">
               <h5 class="card-title">Code Quiz App</h5>
               <p class="card-text">HTML | CSS | JavaScript | Git</p>
-              <a href="https://delizoderek.github.io/uwbootcamp_code-quiz/" target="_blank" class="btn custom-btn">Deployed Application</a>
-              <a href="https://github.com/delizoderek/uwbootcamp_code-quiz" target="_blank" class="btn custom-btn">Source Code</a>
+              <a
+                href="https://delizoderek.github.io/uwbootcamp_code-quiz/"
+                target="_blank"
+                class="btn custom-btn"
+                >Deployed Application</a
+              >
+              <a
+                href="https://github.com/delizoderek/uwbootcamp_code-quiz"
+                target="_blank"
+                class="btn custom-btn"
+                >Source Code</a
+              >
             </div>
           </div>
-          <div class="col-12 col-lg-5 card custom-card-margin">
-            <img src="./assets/media/SiteContent/crow-research-team.webp" class="card-img-top" alt="...">
-            <div class="card-body custom-container-bg">
-              <h5 class="card-title">Decoding the Language of Crows</h5>
-              <p class="card-text">MATLAB | Spectogram | UI/UX Design</p>
-              <a href="https://www.cbc.ca/news/canada/british-columbia/university-of-washington-bothell-researchers-study-crows-1.4436949" target="_blank" class="btn custom-btn">CBC Article</a>
-              <a href="https://www.uwb.edu/news/june-2018/research-symposium" target="_blank" class="btn custom-btn">UWB Article</a>
+          <div class="col-12 col-lg-5 card my-3 second-bg">
+            <img
+              src="./assets/media/SiteContent/team_generator.png"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body second-bg">
+              <h5 class="card-title">Team Profile Generator</h5>
+              <p class="card-text">NodeJs | Javascript | HTML | CSS </p>
+              <a
+                href="https://www.youtube.com/watch?v=PEOoQzEkoWY"
+                target="_blank"
+                class="btn custom-btn"
+                >Demo</a
+              >
+              <a
+                href="https://github.com/delizoderek/team-generator"
+                target="_blank"
+                class="btn custom-btn"
+                >Source Code</a
+              >
             </div>
           </div>
-          <div class="col-12 col-lg-5 card custom-card-margin">
-            <img src="./assets/media/SiteContent/ar_manual_team.jpg" class="card-img-top" alt="Three men standing next to each other holding 3d printed parts">
-            <div class="card-body custom-container-bg">
-              <h5 class="card-title">Prosthetic Hand AR Assembly Manual</h5>
-              <p class="card-text">Unity | Vuforia | C# | 3D Animation</p>
-              <a href="https://enablingthefuture.org/2016/08/23/augmented-reality-and-e-nable/" target="_blank" class="btn custom-btn">E-nable Article</a>
+          <div class="col-12 col-lg-5 card my-3 second-bg">
+            <img
+              src="./assets/media/SiteContent/employee-management-system.png"
+              class="card-img-top"
+              alt="Three men standing next to each other holding 3d printed parts"
+            />
+            <div class="card-body second-bg">
+              <h5 class="card-title">Employee Management System</h5>
+              <p class="card-text">NodeJs | Inquirer | Javascript | Git</p>
+              <a
+                href="https://enablingthefuture.org/2016/08/23/augmented-reality-and-e-nable/"
+                target="_blank"
+                class="btn custom-btn"
+                >Demo</a
+              >
+              <a
+                href="https://github.com/delizoderek/employee-management-system"
+                target="_blank"
+                class="btn custom-btn"
+                >Source Code</a
+              >
             </div>
           </div>
+        </div>
       </section>
-      <!-- Contact us -->
-      <aside id="contact-me" class="col-12 col-lg-2 d-flex custom-alignment">
-        <h1 class="header-title">Contact Me</h1>
-      </aside>
-      <section
-        class="col-12 col-lg-10 d-flex justify-content-around custom-direction"
-      >
-        <h2 id="contactlinks">509-593-0047</h2>
-        <h2 id="contactlinks">
-          <a href="mailto:dwdelizo@gmail.com" target="_blank">dwdelizo@gmail.com</a>
-        </h2>
-        <h2 id="contactlinks">
-          <a href="https://www.linkedin.com/in/derek-delizo/" target="_blank">LinkedIn</a>
-        </h2>
-        <h2 id="contactlinks">
-          <a href="https://github.com/delizoderek" target="_blank">Github</a>
-        </h2>
-      </section>
+      <h2 id="contact-me" class="section-title prime-bg m-0 pb-3">Contact Me</h2>
+      <footer
+      class="
+        col-12 col-lg-10
+        vw-100
+        d-flex
+        pb-5
+        justify-content-around
+        custom-direction
+        prime-bg
+      "
+    >
+      <h2 class="contactlinks quin-text">509-593-0047</h2>
+      <h2 class="contactlinks">
+        <a class="quin-text" href="mailto:dwdelizo@gmail.com" target="_blank"
+          >dwdelizo@gmail.com</a
+        >
+      </h2>
+      <h2 class="contactlinks">
+        <a class="quin-text" href="https://www.linkedin.com/in/derek-delizo/" target="_blank"
+          >LinkedIn</a
+        >
+      </h2>
+      <h2 class="contactlinks">
+        <a class="quin-text" href="https://github.com/delizoderek" target="_blank">Github</a>
+      </h2>
+    </footer>
+
     </main>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
+    <script src="./assets/js/index.js"></script>
   </body>
 </html>
